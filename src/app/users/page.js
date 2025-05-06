@@ -1,11 +1,7 @@
-import React from 'react'
+import UsersPage from "@/components/template/users/UsersPage";
 
 function page() {
-  return (
-    <div>
-      usert
-    </div>
-  )
+  return <UsersPage />;
 }
 
-export default page
+export default page;
