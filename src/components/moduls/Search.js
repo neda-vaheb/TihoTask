@@ -2,11 +2,11 @@ function Search({ search, setSearch, searchFiled, setSearchFiled }) {
   const fields = [
     { value: "name", label: "Name" },
     { value: "email", label: "Email" },
-    { value: "username", label: "Username" },
+  
   ];
 
   return (
-    <div className="mb-4 flex flex-wrap   items-center gap-2">
+    <div className="mb-4 flex flex-wrap  justify-center md:justify-start items-center gap-2">
       {/* Search Input */}
       <div className="relative md:w-48 w-44">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -62,7 +62,7 @@ function getFieldLabel(field) {
   const labels = {
     name: "Name",
     email: "Email",
-    username: "Username",
+    
   };
   return labels[field] || field;
 }

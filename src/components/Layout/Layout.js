@@ -4,16 +4,20 @@ function Layout({children}) {
  
   return (
     <>
-      <header className='bg-[#89AEB2] w-full flex justify-between items-center px-[30px] py-[20px]'>
-<h2 className='font-bold text-white'>TihoTask</h2>
+      <header className='bg-[#89AEB2] w-full flex justify-between items-center px-[30px] py-[20px] m-auto'>
+<h2 className='font-bold text-white text-[12px] md:text-[1.5rem]'> <Link href="./">TihoTask</Link></h2>
 <nav>
     <ul className='flex gap-[10px] text-white mr-[20px]'>
     <li>
-            <Link href="./posts" className='hover:text-[#455f62] transition '>posts</Link> 
+           <Link href="./"  className='hover:text-[#455f62] transition text-[10px] font-bold md:text-[1rem]'>HomePage</Link> 
+        </li>
+    <li>
+            <Link href="./posts" className='hover:text-[#455f62] transition text-[10px] font-bold md:text-[1rem] '>posts</Link> 
         </li>
         <li>
-           <Link href="./users"  className='hover:text-[#455f62] transition '>users</Link> 
+           <Link href="./users"  className='hover:text-[#455f62] transition text-[10px] font-bold md:text-[1rem]'>users</Link> 
         </li>
+       
        
     </ul>
 </nav>

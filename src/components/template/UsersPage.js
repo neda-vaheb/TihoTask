@@ -28,9 +28,9 @@ function UsersPage() {
   return (
     <div className="p-4 m-auto flex flex-col justify-center items-center  h-[100vh] w-full">
       <UserList users={users} setUsers={setUsers} error={error} isLoading={isLoading} />
-      <div className="flex justify-center items-center gap-4 mt-4">
+      <div className="flex justify-center items-center gap-4 md:mt-4">
         <button
-          className={`px-4 py-2 rounded-md ${
+          className={`md:px-4 px-2 md:py-2 py-1 rounded-md text-[12px] md:text-[16px] ${
             page <= 1
               ? "bg-gray-300 text-gray-500 cursor-not-allowed"
               : "bg-[#375559] text-white hover:bg-[#89AEB2]"
@@ -48,7 +48,7 @@ function UsersPage() {
         </span>
 
         <button
-          className={`px-4 py-2 rounded-md ${
+          className={`md:px-4 px-2 md:py-2 py-1 rounded-md text-[12px] md:text-[16px] ${
             page >= perPage
               ? "bg-gray-300 text-gray-500 cursor-not-allowed"
               : "bg-[#375559] text-white hover:bg-[#89AEB2]"

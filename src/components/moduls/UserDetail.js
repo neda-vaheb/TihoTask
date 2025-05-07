@@ -30,22 +30,22 @@ function UserDetail({id}) {
           User Details
         </h2>
         <div className="flex flex-col gap-2 p-2">
-          <p>
+          <p className='flex flex-col md:flex-row gap-[6px] border-b border-b-gray-300 pb-3 md:pb-0 md:border-none'>
             Name : <span>{selectedUser.name}</span>
           </p>
-          <p>
+          <p className='flex flex-col md:flex-row gap-[6px] border-b border-b-gray-300 pb-3 md:pb-0 md:border-none'>
             Email : <span>{selectedUser.email}</span>
           </p>
-          <p>
+          <p className='flex flex-col md:flex-row gap-[6px] border-b border-b-gray-300 pb-3 md:pb-0 md:border-none'>
             Phone : <span>{selectedUser.phone}</span>
           </p>
-          <p>
+          <p className='flex flex-col md:flex-row gap-[6px] border-b border-b-gray-300 pb-3 md:pb-0 md:border-none'>
             Website : <span>{selectedUser.website}</span>
           </p>
-          <p>
+          <p className='flex flex-col md:flex-row gap-[6px] border-b border-b-gray-300 pb-3 md:pb-0 md:border-none'>
             Company : <span>{selectedUser.company.name}</span>
           </p>
-          <p>
+          <p className='flex flex-col md:flex-row gap-[6px] border-b border-b-gray-300 pb-3 md:pb-0 md:border-none'>
             Address : <span>{selectedUser.address.city} - {selectedUser.address.street} - {selectedUser.address.suite}  </span>
           </p>
         </div>

@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
-import PostList from "@/components/template/posts/PostsList";
+import PostList from "@/components/template/PostsList";
 
 function PostsPage() {
   const [posts, setposts] = useState([]);

@@ -1,19 +1,18 @@
 "use client";
-import Loader from "@/app/Loader";
+
 import UserDetail from "@/components/moduls/UserDetail";
-import UserPost from "@/components/moduls/UserPost";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import UserPost from "@/components/moduls/PostDetail";
+
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+
 
 function page() {
   const { userId } = useParams();
  
   return (
-    <div className="w-full h-[100vh]">
-      <div className=" w-[1000px] mx-auto h-fit my-[20px] border border-gray-300 p-8 rounded-sm shadow-2xs">
+    <div className="w-full  h-[100vh]">
+      <div className=" md:w-[1000px] w-fit mx-auto h-fit my-[20px] border border-gray-300 p-8 rounded-sm shadow-2xs">
     <UserDetail id={userId}/>
        <UserPost id={userId}/>
         <div className="flex gap-3.5 justify-end">
