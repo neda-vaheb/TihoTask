@@ -2,7 +2,6 @@
 
 import UserDetail from "@/components/moduls/UserDetail";
 import UserPost from "@/components/moduls/PostDetail";
-
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
