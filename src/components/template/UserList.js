@@ -25,28 +25,25 @@ function UserList({ users, isLoading, error }) {
     });
     SetFilterUser(results);
   }, [search, searchFiled, users]);
-const userHandler = (id)=>{
-
-router.push(`/users/${id}`);
-
-}
+  const userHandler = (id) => {
+    router.push(`/users/${id}`);
+  };
   return (
     <div className="overflow-x-scroll p-4">
-    
-        {/* search */}
-        <Search
-          search={search}
-          setSearch={setSearch}
-          searchFiled={searchFiled}
-          setSearchFiled={setSearchFiled}
-        />
-      
+      {/* search */}
+      <Search
+        search={search}
+        setSearch={setSearch}
+        searchFiled={searchFiled}
+        setSearchFiled={setSearchFiled}
+      />
+
       {/* table */}
 
       <table className="table  border-collapse border border-gray-400 table-auto  overflow-x-scroll  w-[1000px] m-auto my-8">
         <thead className="bg-[#89AEB2] text-base-content text-left text-white">
           <tr className="bg-primary dark:bg-transparent ">
-            <th className="px-4 py-4">UserId</th>  
+            <th className="px-4 py-4">UserId</th>
             <th className="px-4 py-4">Name</th>
             <th className="px-4 py-4">Company</th>
             <th className="px-4 py-4">Email</th>
@@ -74,14 +71,15 @@ router.push(`/users/${id}`);
           )}
           {filterUser.length > 0 ? (
             paginateUsers.map((user) => (
-              <tr key={user.id} className="hover:text-gray-500 transition border border-gray-400" onClick={()=>userHandler(user.id)}>
-               
+              <tr
+                key={user.id}
+                className="hover:text-gray-500 transition border border-gray-400"
+                onClick={() => userHandler(user.id)}
+              >
                 <td className="px-4 py-2 cursor-pointer hover:opacity-40 transition-all">
                   {user.id}
                 </td>
-                <td className="px-4 py-2 cursor-pointer">
-                  {user.name}
-                </td>
+                <td className="px-4 py-2 cursor-pointer">{user.name}</td>
                 <td className="px-4 py-2 cursor-pointer">
                   {user.company.name}
                 </td>
@@ -89,20 +87,19 @@ router.push(`/users/${id}`);
                   <Link
                     href={`mailto:${user.email}`}
                     className="link link-hover"
-                    >
+                  >
                     {user.email}
                   </Link>
                 </td>
                 <td className="px-4 py-2  cursor-pointer">
                   <button
-                    onClick={()=>userHandler(user.id)}
+                    onClick={() => userHandler(user.id)}
                     className="cursor-pointer hover:bg-[#89AEB2] bg-[#375559] text-white px-2 rounded-sm"
-                    > 
+                  >
                     See Details
                   </button>
                 </td>
               </tr>
-                   
             ))
           ) : (
             <tr>

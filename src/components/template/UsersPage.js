@@ -24,10 +24,14 @@ function UsersPage() {
     queryFn: fetchData,
   });
 
-
   return (
     <div className="p-4 m-auto flex flex-col justify-center items-center  h-[100vh] w-full">
-      <UserList users={users} setUsers={setUsers} error={error} isLoading={isLoading} />
+      <UserList
+        users={users}
+        setUsers={setUsers}
+        error={error}
+        isLoading={isLoading}
+      />
       <div className="flex justify-center items-center gap-4 md:mt-4">
         <button
           className={`md:px-4 px-2 md:py-2 py-1 rounded-md text-[12px] md:text-[16px] ${

@@ -1,6 +1,5 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
-
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
@@ -24,10 +23,14 @@ function PostsPage() {
     queryFn: fetchData,
   });
 
-
   return (
     <div className="p-4 m-auto flex flex-col justify-center items-center  h-[100vh] w-full">
-      <PostList posts={posts} setposts={setposts} error={error} isLoading={isLoading} />
+      <PostList
+        posts={posts}
+        setposts={setposts}
+        error={error}
+        isLoading={isLoading}
+      />
       <div className="flex justify-center items-center gap-4 mt-4">
         <button
           className={`px-4 py-2 rounded-md ${

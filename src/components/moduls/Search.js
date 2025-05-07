@@ -2,7 +2,6 @@ function Search({ search, setSearch, searchFiled, setSearchFiled }) {
   const fields = [
     { value: "name", label: "Name" },
     { value: "email", label: "Email" },
-  
   ];
 
   return (
@@ -62,7 +61,6 @@ function getFieldLabel(field) {
   const labels = {
     name: "Name",
     email: "Email",
-    
   };
   return labels[field] || field;
 }
