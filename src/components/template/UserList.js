@@ -40,7 +40,7 @@ function UserList({ users, isLoading, error }) {
 
       {/* table */}
 
-      <table className="table  border-collapse border border-gray-400 table-auto  overflow-x-scroll  w-[1000px] m-auto my-8">
+      <table className="table  border-collapse border border-gray-400 table-auto  w-auto overflow-x-scroll md:w-[1000px] m-auto my-8">
         <thead className="bg-[#89AEB2] text-base-content text-left text-white">
           <tr className="bg-primary dark:bg-transparent ">
             <th className="px-4 py-4">UserId</th>
