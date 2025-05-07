@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 
-function page() {
+function Page() {
   const { userId } = useParams();
  
   return (
@@ -34,4 +34,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

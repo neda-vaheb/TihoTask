@@ -3,7 +3,7 @@ import UserPost from '@/components/moduls/PostDetail';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
-function page() {
+function Page() {
     const { postId } = useParams();
    
   return (
@@ -27,4 +27,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
