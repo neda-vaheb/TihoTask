@@ -31,17 +31,17 @@ function PostList({ posts, isLoading, error }) {
         {paginatePosts.map((posts) => (
           <div
             key={posts.id}
-            className="hover:text-gray-500 transition border border-gray-400 w-[350px] h-[260px] p-4 rounded-md shadow-md"
+            className="hover:text-gray-500 transition flex flex-col justify-between border border-gray-400 w-[250px] md:w-[350px] h-[270px] p-4 rounded-md shadow-md"
             onClick={() => postsHandler(posts.id)}
           >
-            <h3 className="text-center cursor-pointer font-bold">
+            <h3 className="text-center cursor-pointer font-bold text-[14px] md:text-[1.2rem]">
               {posts.title}
             </h3>
-            <p className="py-3 cursor-pointer text-center ">{posts.body}</p>
+            <p className="md:py-3 py-1 cursor-pointer text-center text-[12px] md:text-[1rem]">{posts.body.split(" ").slice(0,8).join(" ")}...</p>
 
             <button
               onClick={() => postsHandler(posts.id)}
-              className="cursor-pointer hover:bg-[#89AEB2] bg-[#375559] text-white my-3 px-2 rounded-sm"
+              className="cursor-pointer hover:bg-[#89AEB2] bg-[#375559] text-white md:my-3 my-1 text-[12px] md:text-[1rem] px-2 rounded-sm"
             >
               See Details
             </button>
