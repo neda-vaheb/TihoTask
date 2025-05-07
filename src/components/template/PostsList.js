@@ -23,7 +23,7 @@ function PostList({ posts, isLoading, error }) {
       {isLoading && <Loader />}
       {error && (
         <p>
-          Error loading users
+          Error loading Posts
           {error.message}
         </p>
       )}
