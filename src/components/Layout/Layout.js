@@ -6,13 +6,13 @@ function Layout({ children }) {
       <header className="bg-[#89AEB2] w-full flex justify-between items-center px-[30px] py-[20px] m-auto">
         <h2 className="font-bold text-white text-[12px] md:text-[1.5rem]">
           {" "}
-          <Link href="./">TihoTask</Link>
+          <Link href="/">TihoTask</Link>
         </h2>
         <nav>
           <ul className="flex gap-[10px] text-white mr-[20px]">
             <li>
               <Link
-                href="./"
+                href="/"
                 className="hover:text-[#455f62] transition text-[10px] font-bold md:text-[1rem]"
               >
                 HomePage
@@ -20,7 +20,7 @@ function Layout({ children }) {
             </li>
             <li>
               <Link
-                href="./posts"
+                href="/posts"
                 className="hover:text-[#455f62] transition text-[10px] font-bold md:text-[1rem] "
               >
                 posts
@@ -28,7 +28,7 @@ function Layout({ children }) {
             </li>
             <li>
               <Link
-                href="./users"
+                href="/users"
                 className="hover:text-[#455f62] transition text-[10px] font-bold md:text-[1rem]"
               >
                 users
