@@ -40,14 +40,14 @@ function UserList({ users, isLoading, error }) {
 
       {/* table */}
 
-      <table className="table  border-collapse border border-gray-400 table-auto  w-auto overflow-x-scroll md:w-[1000px] m-auto my-8">
+      <table className="table  border-collapse border border-gray-400 table-auto text-[10px] md:text-[1rem] w-full  overflow-scroll max-w-[1000px] m-auto my-8">
         <thead className="bg-[#89AEB2] text-base-content text-left text-white">
           <tr className="bg-primary dark:bg-transparent ">
-            <th className="px-4 py-4">UserId</th>
-            <th className="px-4 py-4">Name</th>
-            <th className="px-4 py-4">Company</th>
-            <th className="px-4 py-4">Email</th>
-            <th className="px-4 py-4"></th>
+            <th className="px-2 py-2 md:px-4 md:py-4 hidden md:block">UserId</th>
+            <th className="px-2 py-2 md:px-4 md:py-4">Name</th>
+            <th className="px-2 py-2 md:px-4 md:py-4">Company</th>
+            <th className="px-2 py-2 md:px-4 md:py-4">Email</th>
+            <th className="px-2 py-2 md:px-4 md:py-4"></th>
           </tr>
         </thead>
         <tbody className="border border-gray-400">
@@ -76,14 +76,14 @@ function UserList({ users, isLoading, error }) {
                 className="hover:text-gray-500 transition border border-gray-400"
                 onClick={() => userHandler(user.id)}
               >
-                <td className="px-4 py-2 cursor-pointer hover:opacity-40 transition-all">
+                <td className="px-2 py-1 md:px-4 md:py-2 cursor-pointer hover:opacity-40 transition-all md:block hidden">
                   {user.id}
                 </td>
-                <td className="px-4 py-2 cursor-pointer">{user.name}</td>
-                <td className="px-4 py-2 cursor-pointer">
+                <td className="px-2 py-1 md:px-4 md:py-2 cursor-pointer">{user.name}</td>
+                <td className="px-2 py-1 md:px-4 md:py-2 cursor-pointer">
                   {user.company.name}
                 </td>
-                <td className="px-4 py-2  cursor-pointer">
+                <td className="px-2 py-1 md:px-4 md:py-2  cursor-pointer">
                   <Link
                     href={`mailto:${user.email}`}
                     className="link link-hover"
@@ -91,7 +91,7 @@ function UserList({ users, isLoading, error }) {
                     {user.email}
                   </Link>
                 </td>
-                <td className="px-4 py-2  cursor-pointer">
+                <td className="px-2 py-1 md:px-4 md:py-2  cursor-pointer">
                   <button
                     onClick={() => userHandler(user.id)}
                     className="cursor-pointer hover:bg-[#89AEB2] bg-[#375559] text-white px-2 rounded-sm"
