@@ -5,6 +5,7 @@ import UserList from "./UserList";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
+import { Button } from "../ui/button";
 
 function UsersPage() {
   const [users, setUsers] = useState([]);
@@ -33,7 +34,7 @@ function UsersPage() {
         isLoading={isLoading}
       />
       <div className="flex justify-center items-center gap-4 md:mt-4">
-        <button
+        <Button
           className={`md:px-4 px-2 md:py-2 py-1 rounded-md text-[12px] md:text-[16px] ${
             page <= 1
               ? "bg-gray-300 text-gray-500 cursor-not-allowed"
@@ -45,13 +46,13 @@ function UsersPage() {
           }}
         >
           Previous
-        </button>
+        </Button>
 
         <span className="mx-2">
           {page} / {perPage}
         </span>
 
-        <button
+        <Button
           className={`md:px-4 px-2 md:py-2 py-1 rounded-md text-[12px] md:text-[16px] ${
             page >= perPage
               ? "bg-gray-300 text-gray-500 cursor-not-allowed"
@@ -63,7 +64,7 @@ function UsersPage() {
           }}
         >
           Next
-        </button>
+        </Button>
       </div>
     </div>
   );

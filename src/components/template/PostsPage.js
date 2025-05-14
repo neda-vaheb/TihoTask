@@ -10,7 +10,7 @@ function PostsPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const page = Number(searchParams.get("page")) || 1;
-  const perPage = Number(searchParams.get("per_page")) || 2;
+  const perPage = Number(searchParams.get("per_page")) || 5;
 
   const fetchData = async () => {
     const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
